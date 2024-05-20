@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизація та Реєстрація</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tab">
+    <button class="tablinks" id="defaultOpen">Вхід</button>
+    <button class="tablinks">Реєстрація</button>
+</div>
+
+<div id="Login" class="tabcontent">
+    <h3>Вхід</h3>
+    <form id="loginForm" class="form-container" novalidate>
+        <div id="unameError" class="error"></div>
+        <label for="uname_login"><b>Ім'я користувача</b></label>
+        <input type="text" placeholder="Введіть ім'я користувача" id="uname_login" minlength="3" maxlength="15"
+               required>
+        <label for="psw_login"><b>Пароль</b></label>
+        <div class="eyePos">
+            <input type="password" placeholder="Введіть пароль" id="psw_login" minlength="6" required>
+            <span class="togglePswLogin" id="togglePswLogin">
+                <img alt="eye" src="https://img.icons8.com/material-outlined/24/000000/visible--v1.png"/>
+            </span>
+        </div>
+        <input type="submit" value="Увійти">
+    </form>
+</div>
+
+<div id="Signup" class="tabcontent">
+    <h3>Реєстрація</h3>
+    <form id="signupForm" class="form-container" novalidate>
+        <label for="new_uname"><b>Ім'я користувача</b></label>
+        <input type="text" placeholder="Введіть нове ім'я користувача" id="new_uname" minlength="3" maxlength="15"
+               required>
+        <div id="newUnameError" class="error"></div>
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Введіть Email" id="email" required>
+        <div id="emailError" class="error"></div>
+        <label for="new_psw"><b>Пароль</b></label>
+        <div class="eyePos">
+            <input type="password" placeholder="Введіть новий пароль" id="new_psw" minlength="6" required>
+            <span class="toggleNewPsw" id="toggleNewPsw">
+                <img alt="" src="https://img.icons8.com/material-outlined/24/000000/visible--v1.png"/>
+            </span>
+        </div>
+        <label for="confirm_psw"><b>Підтвердіть пароль</b></label>
+        <div class="eyePos">
+            <input type="password" placeholder="Підтвердіть пароль" id="confirm_psw" minlength="6" required>
+            <span class="toggleConfirmPsw" id="toggleConfirmPsw">
+                <img alt="" src="https://img.icons8.com/material-outlined/24/000000/visible--v1.png"/>
+            </span>
+        </div>
+        <div id="confirmPswError" class="error"></div>
+        <input type="submit" value="Зареєструватися">
+    </form>
+</div>
+
+<div id="loader" class="loader"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
